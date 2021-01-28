@@ -38,7 +38,7 @@ The eipcontrol module confirms the offset is correct by sending filler bytes ("A
 ![Alt text](/screenshots/5.2.png?raw=true)
 
 
-The badchars module sends a list of hexadecimal characters excluding 00 as bytes to the target to determine forbidden characters. I have coded logic to allow for the removal of up to 10 forbidden characters. This should be enough for the applications being exploited by this program. The size switch is used for our filler bytes.
+The badchars module sends a list of hexadecimal characters excluding 00 as bytes to the target to determine forbidden characters. I have coded logic to allow for the removal of up to 10 forbidden characters. This should be enough for the applications being exploited by this program. The size switch is used for our filler bytes. This module is dependent on the chars.txt file located in the repo.
 
 ![Alt text](/screenshots/6.1.png?raw=true)
 
@@ -52,7 +52,7 @@ Below are screenshots of running the mona module withing immunity to find our JM
 ![Alt text](/screenshots/7.2.png?raw=true)
 
 
-The jmp module uses the JMP ESP address discovered using mona to test that our exploit hits the corect point. Set a break point on the JMP ESP address and run the module. Use the size switch for our filler bytes. Note: enter the JMP ESP address as hexadecimal. Instead of \xe1\xe2\xe3\xe4 you would type E1E2E3E4 (letters are case sensitive and must be capatalized). This module is dependent on the chars.txt file located in the repo.
+The jmp module uses the JMP ESP address discovered using mona to test that our exploit hits the corect point. Set a break point on the JMP ESP address and run the module. Use the size switch for our filler bytes. Note: enter the JMP ESP address as hexadecimal. Instead of \xe1\xe2\xe3\xe4 you would type E1E2E3E4 (letters are case sensitive and must be capatalized). 
 
 ![Alt text](/screenshots/8.1.png?raw=true)
 
