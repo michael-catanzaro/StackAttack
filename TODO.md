@@ -9,6 +9,7 @@ A tool written in python3 to exploit simple stack-based buffer overflows.
 - [ ] Add color class to make stdout easier to decipher.
 - [ ] Add command switch to arg.parser for greater versatility.
 - [ ] Redo readme to include demos of brainpan, dostackbufferoverflowgood, vulnserver, and slmail 5.5.
+- [ ] Add binary files for brainpan, dostackbufferoverflowgood, vulnserver, and slmail 5.5.
 
 ### Completed ✓
 - [x] Created Todo
