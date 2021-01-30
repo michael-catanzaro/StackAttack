@@ -2,15 +2,16 @@
 A tool written in python3 to exploit simple stack-based buffer overflows.
 
 ### Todo
-- [ ] Remove unneeded os module import 
-- [ ] Fix typo on line 281. \\x00\\x01 = 0102 should be \\x01\\x02 = 0102.
-- [ ] Remove nops variable from line 305. Previously the nops were passed to msfvenom but they are now separate.
-- [ ] Add additonal error handling. I.e. detect if chars.txt is missing when badchars is run.
-- [ ] Add color class to make stdout easier to decipher.
-- [ ] Add command switch to arg.parser for greater versatility.
 - [ ] Redo readme to include demos of brainpan, dostackbufferoverflowgood, vulnserver, and slmail 5.5.
 - [ ] Add binary files for brainpan, dostackbufferoverflowgood, vulnserver, and slmail 5.5.
-- [ ] Add function to pop calculator.
+
 
 ### Completed ✓
 - [x] Created Todo
+- [x] Remove unneeded os module import - Added in v 1.1 01/29/2021
+- [x] Fix typo on line 281. \\x00\\x01 = 0102 should be \\x01\\x02 = 0102. -Added in v 1.1 01/29/2021
+- [x] Remove nops variable from line 305. Previously the nops were passed to msfvenom but they are now separate. - Added in v 1.1 01/29/2021
+- [x] Add additonal error handling. I.e. detect if chars.txt is missing when badchars is run. - Added in v 1.1 01/29/2021
+- [x] Add color class to make stdout easier to decipher. - Added in v 1.1 01/29/2021
+- [x] Add command switch to arg.parser for greater versatility. - Added in v 1.1 01/29/2021
+- [x] Add function to pop calculator. - Added in v 1.1 01/29/2021
