@@ -100,7 +100,7 @@ The shell module uses msfvenom to generate a payload to send to our target to ho
 
 # dostackbufferoverflowgood POC
 
-Dostackbufferoverflowgood is a great resource for learning how to exploit stack-based buffer overflow vulnerabiltites. This POC shows the effectiveness of StackAttack against the dostackbufferoverflowgood binary. Notice that the optional comamand switch has been used in the following examples. Credit for the binary goes to Justin Steven ("https://github.com/justinsteven/dostackbufferoverflowgood").
+Dostackbufferoverflowgood is a great resource for learning how to exploit stack-based buffer overflow vulnerabiltites. This POC shows the effectiveness of StackAttack against the dostackbufferoverflowgood binary. Notice that the optional command switch has been used in the following examples. Credit for the binary goes to Justin Steven ("https://github.com/justinsteven/dostackbufferoverflowgood").
 
 **Fuzzing:**
 
@@ -185,7 +185,7 @@ Running the shell module against the dostackbufferoverflowgood binary.
 
 # Vulnserver POC:
 
-Vulnserver is another great learning resource for exploiting stack-based bufferoverflow vulnerabilities. This POC shows the effectiveness of StackAttack against the vulnserver binary. Notice that the optional comamand switch has been used in the following examples. Credit for the binary goes to Stephen Bradshaw ("https://github.com/stephenbradshaw/vulnserver").
+Vulnserver is another great learning resource for exploiting stack-based bufferoverflow vulnerabilities. This POC shows the effectiveness of StackAttack against the vulnserver binary. Notice that the optional command switch has been used in the following examples. Credit for the binary goes to Stephen Bradshaw ("https://github.com/stephenbradshaw/vulnserver").
 
 
 **Fuzzing:**
@@ -275,12 +275,12 @@ Running the shell module against the vulnserver binary.
 
 # SLMail 5.5 POC
 
-SLMAil 5.5 is an application with a discosed stack-based bufferoverflow vulnerabiltity. What separates this example from the others is this application was not coded to be intentionally vulnerable. This POC shows the effectiveness of StackAttack against the SLMAIL 5.5 application. Notice that the optional comamand switch has been used in the following examples. Note: I did not initially write this tool to have the capapbility to exploit this application. It had some interesting results but was exploitable nonetheless.
+SLMAil 5.5 is an application with a discosed stack-based bufferoverflow vulnerabiltity. What separates this example from the others is this application was not coded to be intentionally vulnerable. This POC shows the effectiveness of StackAttack against the SLMAIL 5.5 application. Notice that the optional command switch has been used in the following examples. Note: I did not initially write this tool to have the capability to exploit this application. It had some interesting results but was exploitable nonetheless.
 
 
 **Fuzzing:**
 
-Running the fuzzing module against the SLMail 5.5 binary.
+Running the fuzzing module against the SLMail 5.5 binary. Notice that the command used has an unescaped double quote. The application expects a username and password sent as different strings. I found that sending the unescaped double quote then closing it allowed the user and pass parameters to be read separately.
 
 ![Alt text](/screenshots/slmail%205.5/1.1.png?raw=true)
 
