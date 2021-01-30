@@ -100,7 +100,7 @@ The shell module uses msfvenom to generate a payload to send to our target to ho
 
 # dostackbufferoverflowgood POC
 
-Dostackbufferoverflowgood is a great resource for learning how to exploit stack-based buffer overflow vulnerabiltites. This POC shows the effectiveness of StackAttack against the dostackbufferoverflowgood binary. Notice that the optional comamand switch has been used in the following examples. All credit for the binary goes to Justin Steven ("https://github.com/justinsteven/dostackbufferoverflowgood").
+Dostackbufferoverflowgood is a great resource for learning how to exploit stack-based buffer overflow vulnerabiltites. This POC shows the effectiveness of StackAttack against the dostackbufferoverflowgood binary. Notice that the optional comamand switch has been used in the following examples. Credit for the binary goes to Justin Steven ("https://github.com/justinsteven/dostackbufferoverflowgood").
 
 **Fuzzing:**
 
@@ -181,4 +181,92 @@ Running the shell module against the dostackbufferoverflowgood binary.
 ![Alt text](/screenshots/dostackbufferoverflowgood/9.1.png?raw=true)
 
 ![Alt text](/screenshots/dostackbufferoverflowgood/9.2.png?raw=true)
+
+
+# Vulnserver POC:
+
+Vulnserver is another great learning resource for exploiting stack-based bufferoverflow vulnerabilities. This POC shows the effectiveness of StackAttack against the vulnserver binary. Notice that the optional comamand switch has been used in the following examples. Credit for the binary goes to Stephen Bradshaw ("https://github.com/stephenbradshaw/vulnserver").
+
+
+**Fuzzing:**
+
+Running the fuzzing module against the vulnserver binary.
+
+![Alt text](/screenshots/vulnserver/1.1.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/1.2.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/1.3.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/1.4.png?raw=true)
+
+
+**Pattern:**
+
+Running the pattern module against the vulnserver binary.
+
+![Alt text](/screenshots/vulnserver/2.1.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/2.2.png?raw=true)
+
+
+**Offset:**
+
+Running the offset module against the vulnserver binary.
+
+![Alt text](/screenshots/vulnserver/3.png?raw=true)
+
+
+**EIP Control:**
+
+Running the eipcontrol module against the vulnserver binary.
+
+![Alt text](/screenshots/vulnserver/4.1.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/4.2.png?raw=true)
+
+
+**Bad Characters:**
+
+Running the badchars module against the vulnserver binary.
+
+![Alt text](/screenshots/vulnserver/5.1.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/5.2.png?raw=true)
+
+
+**Mona (not part of the tool but part of the process):**
+
+Below are screenshots of running the mona module withing immunity to find our JMP ESP for exploitation. While not part of this tool, this process is important to the overall exploitation of the buffer overflow. First run "!mona modules" to discover the unsafe application. Next run "!mona find -s "\xff\xe4" -m 'unsafemodulename'" to locate our JMP ESP.
+
+![Alt text](/screenshots/vulnserver/6.1.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/6.2.png?raw=true)
+
+
+**JMP:**
+
+Running the jmp module against the vulnserver binary.
+
+![Alt text](/screenshots/vulnserver/7.1.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/7.2.png?raw=true)
+
+
+**Calc:**
+
+Running the calc module against the vulnserver binary.
+
+![Alt text](/screenshots/vulnserver/8.1.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/8.2.png?raw=true)
+
+
+**Shell:**
+
+Running the shell module against the vulnserver binary.
+
+![Alt text](/screenshots/vulnserver/9.1.png?raw=true)
+
+![Alt text](/screenshots/vulnserver/9.2.png?raw=true)
 
