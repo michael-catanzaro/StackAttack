@@ -190,7 +190,7 @@ Vulnserver is another great learning resource for exploiting stack-based buffero
 
 **Fuzzing:**
 
-Running the fuzzing module against the vulnserver binary.
+Running the fuzzing module against the vulnserver binary. Notice for the following examples I used and unescaped quote in the command parameter. This is because the application requires both a username and password to be provided and the closing of the unescaped quotes appears as two separate inputs on the application. We attach the payload to the password input.
 
 ![Alt text](/screenshots/vulnserver/1.1.png?raw=true)
 
@@ -271,4 +271,87 @@ Running the shell module against the vulnserver binary.
 ![Alt text](/screenshots/vulnserver/9.1.png?raw=true)
 
 ![Alt text](/screenshots/vulnserver/9.2.png?raw=true)
+
+
+# SLMail 5.5 POC
+
+SLMAil 5.5 is an application with a discosed stack-based bufferoverflow vulnerabiltity. What separates this example from the others is this application was not coded to be intentionally vulnerable. This POC shows the effectiveness of StackAttack against the SLMAIL 5.5 application. Notice that the optional comamand switch has been used in the following examples. Note: I did not initially write this tool to have the capapbility to exploit this application. It had some interesting results but was exploitable nonetheless.
+
+
+**Fuzzing:**
+
+Running the fuzzing module against the SLMail 5.5 binary.
+
+![Alt text](/screenshots/slmail%205.5/1.1.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/1.2.png?raw=true)
+
+
+**Pattern:**
+
+Running the pattern module against the SLMail 5.5 binary.
+
+![Alt text](/screenshots/slmail%205.5/2.1.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/2.2.png?raw=true)
+
+
+**Offset:**
+
+Running the offset module against the SLMail 5.5 binary.
+
+![Alt text](/screenshots/slmail%205.5/3.png?raw=true)
+
+
+**EIP Control:**
+
+Running the eipcontrol module against the SLMail 5.5 binary.
+
+![Alt text](/screenshots/slmail%205.5/4.1.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/4.2.png?raw=true)
+
+
+**Bad Characters:**
+
+Running the badchars module against the SLMail 5.5 binary. Note: This is where things start to get a little interesting. "\x0d" is a bad character but did not need to be removed even though it was sent to the application. You can see that it does not show in the ESP dump. 
+
+![Alt text](/screenshots/slmail%205.5/5.1.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/5.2.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/5.3.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/5.4.png?raw=true)
+
+
+**Mona (not part of the tool but part of the process):**
+
+Below are screenshots of running the mona module withing immunity to find our JMP ESP for exploitation. While not part of this tool, this process is important to the overall exploitation of the buffer overflow. First run "!mona modules" to discover the unsafe application. Next run "!mona find -s "\xff\xe4" -m 'unsafemodulename'" to locate our JMP ESP.
+
+![Alt text](/screenshots/slmail%205.5/6.1.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/6.2.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/6.3.png?raw=true)
+
+
+**JMP:**
+
+Running the jmp module against the SLMail 5.5 binary.
+
+![Alt text](/screenshots/slmail%205.5/7.1.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/7.2.png?raw=true)
+
+
+
+**Shell:**
+
+Running the shell module against the SLMail 5.5 binary. Note: Things get even weirder here. I could not get calc.exe to pop on this box. I could see the correct EIP register when sending the payload to the breakpoint but I assume the application wasn't liking some character in the payload. The shell function prints the payload used to stdout for trouble shooting these issues (look for where the payload stops and try removing the next character from the payload.). "\x04" was breaking the shell payload even though it was not detected as a bad character. I was able to gain a shell after removing it from the shell payload.
+
+![Alt text](/screenshots/slmail%205.5/8.1.png?raw=true)
+
+![Alt text](/screenshots/slmail%205.5/8.2.png?raw=true)
+
 
