@@ -243,6 +243,8 @@ Below are screenshots of running the mona module withing immunity to find our JM
 
 ![Alt text](/screenshots/vulnserver/6.2.png?raw=true)
 
+![Alt text](/screenshots/vulnserver/6.3.png?raw=true)
+
 
 **JMP:**
 
