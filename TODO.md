@@ -2,8 +2,7 @@
 A tool written in python3 to exploit simple stack-based buffer overflows.
 
 ### Todo
-- [ ] Redo readme to include demos of brainpan, dostackbufferoverflowgood, vulnserver, and slmail 5.5.
-- [ ] Add binary files for brainpan, dostackbufferoverflowgood, vulnserver, and slmail 5.5.
+
 
 
 ### Completed ✓
@@ -15,3 +14,5 @@ A tool written in python3 to exploit simple stack-based buffer overflows.
 - [x] Add color class to make stdout easier to decipher. - Added in v 1.1 01/29/2021
 - [x] Add command switch to arg.parser for greater versatility. - Added in v 1.1 01/29/2021
 - [x] Add function to pop calculator. - Added in v 1.1 01/29/2021
+- [x] Redo readme to include demos of brainpan, dostackbufferoverflowgood, vulnserver, and slmail 5.5. - Added 01/30/2021
+- [x] Add binary files for brainpan, dostackbufferoverflowgood, vulnserver, and slmail 5.5. - Added 01/30/2021
