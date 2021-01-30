@@ -138,7 +138,7 @@ def main():
             parser.error("Calc requires host, port, size, and nops. See usage.")
 
     if args.shell == True:
-        if args.target and args.port and args.size and args.nopsis not None:
+        if args.target and args.port and args.size and args.nops is not None:
             shell(host, port, size, nops, cmd)
         else:
             parser.error("Shell requires host, port, size, and nops. See usage.")
