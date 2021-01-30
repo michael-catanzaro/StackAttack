@@ -11,7 +11,7 @@ Below is a screenshot of the usage menu.
 
 # Brainpan POC
 
-Brainpan is one of the more simple binaries available to test and learn stack-based buffer overflows. For this reason, I found it suitable to use as a walkthrough of how StackAttack functions.
+Brainpan is one of the more simple binaries available to test and learn stack-based buffer overflows. For this reason, I found it suitable to use as a walkthrough of how StackAttack functions. Credit for brainpan binary goes to superkojiman on vulnhub ("https://www.vulnhub.com/entry/brainpan-1,51/").
 
 
 **Fuzzing:**
@@ -96,3 +96,89 @@ The shell module uses msfvenom to generate a payload to send to our target to ho
 ![Alt text](/screenshots/brainpan/9.1.png?raw=true)
 
 ![Alt text](/screenshots/brainpan/9.2.png?raw=true)
+
+
+# dostackbufferoverflowgood POC
+
+Dostackbufferoverflowgood is a great resource for learning how to exploit stack-based buffer overflow vulnerabiltites. This POC shows the effectiveness of StackAttack against the dostackbufferoverflowgood binary. Notice that the optional comamand switch has been used in the following examples. All credit for the binary goes to Justin Steven ("https://github.com/justinsteven/dostackbufferoverflowgood").
+
+**Fuzzing:**
+
+Running the fuzzing module against the dostackbufferoverflowgood binary.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/1.1.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/1.2.png?raw=true)
+
+
+**Pattern:**
+
+Running the pattern module against the dostackbufferoverflowgood binary.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/2.1.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/2.2.png?raw=true)
+
+
+**Offset:**
+
+Running the offset module against the dostackbufferoverflowgood binary.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/3.png?raw=true)
+
+
+**EIP Control:**
+
+Running the eipcontrol module against the dostackbufferoverflowgood binary.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/4.1.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/4.2.png?raw=true)
+
+
+**Bad Characters:**
+
+Running the badchars module against the dostackbufferoverflowgood binary.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/5.1.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/5.2.png?raw=true)
+
+
+**Mona (not part of the tool but part of the process):**
+
+Below are screenshots of running the mona module withing immunity to find our JMP ESP for exploitation. While not part of this tool, this process is important to the overall exploitation of the buffer overflow. First run "!mona modules" to discover the unsafe application. Next run "!mona find -s "\xff\xe4" -m 'unsafemodulename'" to locate our JMP ESP.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/6.1.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/6.2.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/6.3.png?raw=true)
+
+
+**JMP:**
+
+Running the jmp module against the dostackbufferoverflowgood binary.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/7.1.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/7.2.png?raw=true)
+
+
+**Calc:**
+
+Running the calc module against the dostackbufferoverflowgood binary.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/8.1.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/8.2.png?raw=true)
+
+
+**Shell:**
+
+Running the shell module against the dostackbufferoverflowgood binary.
+
+![Alt text](/screenshots/dostackbufferoverflowgood/9.1.png?raw=true)
+
+![Alt text](/screenshots/dostackbufferoverflowgood/9.2.png?raw=true)
+
