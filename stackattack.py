@@ -83,7 +83,7 @@ def main():
     parser.add_argument("-e", "--eipcontrol", help="Send buffer to confirm control of EIP.", action="store_true")
     parser.add_argument("-b", "--badchars", help="Send full list of hex characters to find forbidden charcters.", action="store_true")
     parser.add_argument("-j", "--jmp", help="Confirm JMP address for shell code.", action="store_true")
-    parser.add_argument("-C", "--calc", help="Pop calculator program on the target (Windows) to ensure our payload is hitting correctly", action="store_true")
+    parser.add_argument("-C", "--calc", help="Pop calculator program on the target (Windows) to ensure our payload is hitting correctly.", action="store_true")
     parser.add_argument("-S", "--shell", help="Generate shellcode with msfvenom and send to target.", action="store_true")
     parser.add_argument("-n", "--nops", help="Number of nops to add to payload in shell module.", type=int)
     args = parser.parse_args()
@@ -143,7 +143,7 @@ def main():
         else:
             parser.error("Shell requires host, port, and size. See usage.")
     
-    if len(sys.argv)==1:
+    if len(sys.argv) == 1:
         parser.print_usage()
         parser.exit()
     
