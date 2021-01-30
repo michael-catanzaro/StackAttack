@@ -96,5 +96,3 @@ The shell module uses msfvenom to generate a payload to send to our target to ho
 ![Alt text](/screenshots/brainpan/9.1.png?raw=true)
 
 ![Alt text](/screenshots/brainpan/9.2.png?raw=true)
-
-![Alt text](/screenshots/brainpan/9.3.png?raw=true)
