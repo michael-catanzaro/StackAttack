@@ -414,7 +414,7 @@ def jmp(host, port, size, cmd):
 
 def calc(host, port, size, nops, cmd):
     try:
-        eip = input("enter JMP address in hexadecimal format: " )
+        eip = input("Enter JMP address in hexadecimal format: " )
         eip_bytes = bytes.fromhex(eip)
         badchars = input("Enter forbidden characters for payload: " )
         nopsled = "90" * nops
