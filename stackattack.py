@@ -62,10 +62,10 @@ def msg(name=None):
         [-j -t TARGET -p PORT -s SIZE]
         [optional arguments: -c COMMAND]
         Calc function:
-        [-C -t TARGET -p PORT -s SIZE]
+        [-C -t TARGET -p PORT -s SIZE -n NOPS]
         [optional arguments: -c COMMAND]
         Shell function:
-        [-S -t TARGET -p PORT -s SIZE]
+        [-S -t TARGET -p PORT -s SIZE -n NOPS]
         [optional arguments: -c COMMAND]
         '''
 
@@ -132,16 +132,16 @@ def main():
             parser.error("JMP requires host, port, and size. See usage.")
 
     if args.calc == True:
-        if args.target and args.port and args.size is not None:
+        if args.target and args.port and args.size and args.nops is not None:
             calc(host, port, size, nops, cmd)
         else:
-            parser.error("Calc requires host, port, and size. See usage.")
+            parser.error("Calc requires host, port, size, and nops. See usage.")
 
     if args.shell == True:
-        if args.target and args.port and args.size is not None:
+        if args.target and args.port and args.size and args.nopsis not None:
             shell(host, port, size, nops, cmd)
         else:
-            parser.error("Shell requires host, port, and size. See usage.")
+            parser.error("Shell requires host, port, size, and nops. See usage.")
     
     if len(sys.argv) == 1:
         parser.print_usage()
