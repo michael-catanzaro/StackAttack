@@ -1,4 +1,4 @@
-#Full disclosure
+# Full disclosure
 I recently passed my OSCP exam and opted not to use my tool on it. Offensive Security clearly states they will not comment on disallowed tools so I didn't bother asking them. If you choose to use this on the exam, do so at your own risk!
 
 # StackAttack
